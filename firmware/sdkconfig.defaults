@@ -1,0 +1,2 @@
+# Default configuration for ESP32-P4
+CONFIG_IDF_TARGET="esp32p4"

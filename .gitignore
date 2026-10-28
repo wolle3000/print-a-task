@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# ESP-IDF Build & Config Artifacts
+firmware/build/
+firmware/sdkconfig
+firmware/sdkconfig.old
+firmware/managed_components/
+firmware/dependencies.lock
+
+# Python Host Daemon
+host_daemon/venv/
+host_daemon/.venv/
+__pycache__/
+*.pyc
+
+# Rust (Milestone 5)
+target/
+Cargo.lock
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json

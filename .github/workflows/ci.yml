@@ -1,0 +1,25 @@
+name: ESP32-P4 Firmware Build Check
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build Firmware
+    runs-on: ubuntu-latest
+    
+    # Using the official Docker image with pre-installed ESP-IDF v5.3
+    container: espressif/idf:release-v5.3
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build ESP32-P4 Project
+        run: |
+          cd firmware
+          idf.py set-target esp32p4
+          idf.py build
